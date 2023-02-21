@@ -179,9 +179,9 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
         # 获取距离下次生日的时间
         birth_day = get_birthday(value["birthday"], year, today)
         if birth_day == 0:
-            birthday_data = "今天{}生日哦，祝{}生日快乐！天天开心！心想事成！成千上万！万寿无疆...爱你（づ￣3￣）づ╭❤～".format(value["name"], value["name"])
+            birthday_data = "今天是你的生日哦，祝{}生日快乐！乐口常开！开开心心！心满意足！足食丰衣！衣锦腰黄！黄金万两！...爱你（づ￣3￣）づ╭❤～".format(value["name"], value["name"])
         else:
-            birthday_data = "距离{}的生日还剩{}天(>^ω^<)（只有11天就生日了是不是很激动鸭q(≧▽≦q)）".format(value["name"], birth_day)
+            birthday_data = "距离{}的生日还剩{}天(>^ω^<)（工作<span style="color:red; font-size:18px;">忙</span>不忙鸭q(≧▽≦q)）".format(value["name"], birth_day)
         # 将生日数据插入data
         data["data"][key] = {"value": birthday_data, "color": get_color()}
     headers = {
