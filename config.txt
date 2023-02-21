@@ -5,7 +5,7 @@
 # 公众号appSecret
 "app_secret": "64cc3f6dd82a3ee2e687e17734648d82",
 # 模板消息id
-"template_id": "rb82TO-ua2DBw3pNonqnI7U7lKXXHvvv1j49Hi0UvsY",
+"template_id": "lX50M6ZOpxL5z8TuJAwPOgtOfHfJMiHrw0rtQofF26o",
 # 接收公众号消息的微信号，如果有多个，需要在[]里用英文逗号间隔，例如["wx1", "wx2"]
 "user": ["oUAtz6DksQFpAJFTzlCrsICpv23Q",],
  
@@ -18,6 +18,8 @@
 "birthday1": {"name": "你", "birthday": "r1999-02-13"},
 # 在一起的日子，格式同上，暂不不支持农历
 "love_date": "2021-03-12",
+#x新增词
+"keywords": "11223",
 # 金句中文，如果设置了，则会显示这里的，如果为空，默认会读取金山的每日金句
 "note_ch": "",
 # 金句英文
