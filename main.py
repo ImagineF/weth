@@ -181,7 +181,7 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
         if birth_day == 0:
             birthday_data = "今天是你的生日哦，祝{}生日快乐！乐口常开！开开心心！心满意足！足食丰衣！衣锦腰黄！黄金万两！...爱你（づ￣3￣）づ╭❤～".format(value["name"], value["name"])
         else:
-            birthday_data = "距离{}的生日还剩{}天(>^ω^<) \n月色照罗衣，>永< 夜不得寐。".format(value["name"], birth_day)
+            birthday_data = "距离{}的生日还剩{}天(>^ω^<) \n几处泪痕留醉袖，一春愁思近横波。>远< 山低尽不成歌。".format(value["name"], birth_day)
         # 将生日数据插入data
         data["data"][key] = {"value": birthday_data, "color": get_color()}
     headers = {
