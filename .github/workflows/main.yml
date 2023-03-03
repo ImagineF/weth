@@ -7,24 +7,21 @@ on:
 jobs:
 #将工作流程中运行的所有作业组合在一起
   build:
-  #定义名为 build 的作业。 子键将定义作业的属性 
-    runs-on: ubuntu-20.04
+  #定义名为 build 的作业，子键将定义作业的属性 
+    runs-on: ubuntu-latest 
     steps:
       - uses: actions/checkout@v2
     
       - name: Set up Python 3.9
         uses: actions/setup-python@v2
         with:
-          python-version: 3.9.1
+          python-version: 3.9.15
       - name: Set timezone
         run: |
           cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
       - name: install pip packages
         run: |
           python -m pip install --upgrade pip
-           pip install requests
-          pip install zhdate
-          pip freeze > requirements.txt
           pip3 install -r requirements.txt
       - name: weixin
         run: |
