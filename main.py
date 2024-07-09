@@ -58,12 +58,7 @@ def get_weather(region):
     temp = response["now"]["temp"] + u"\N{DEGREE SIGN}" + "C"
     # 风向
     wind_dir = response["now"]["windDir"]
-    if "晴" in weather:
-        note = "今天也要记得带伞"
-    else:
-        note = ""
-
-    return weather, temp, wind_dir, note
+    return weather, temp, wind_dir
  
  
 def get_birthday(birthday, year, today):
@@ -162,10 +157,6 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
                 "value": temp,
                 "color": get_color()
             },
-            "note": {
-                "value": note,
-                "color": get_color()
-            },
             "wind_dir": {
                 "value": wind_dir,
                 "color": get_color()
@@ -238,5 +229,5 @@ if __name__ == "__main__":
         note_ch, note_en = get_ciba()
     # 公众号推送消息
     for user in users:
-        send_message(user, accessToken, region, weather, temp, wind_dir, note, note_ch, note_en)
+        send_message(user, accessToken, region, weather, temp, wind_dir, note_ch, note_en)
     os.system("pause")
