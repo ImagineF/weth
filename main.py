@@ -58,7 +58,12 @@ def get_weather(region):
     temp = response["now"]["temp"] + u"\N{DEGREE SIGN}" + "C"
     # 风向
     wind_dir = response["now"]["windDir"]
-    return weather, temp, wind_dir
+    if "晴" in weather:
+        note = "今天也要记得带伞"
+    else:
+        note = ""
+
+    return weather, temp, wind_dir, note
  
  
 def get_birthday(birthday, year, today):
